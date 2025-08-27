@@ -1,0 +1,33 @@
+{
+  "name": "nexnest-monorepo-starter",
+  "description": "Production-ready monorepo template with Next.js frontend and NestJS backend",
+  "version": "1.0.0",
+  "keywords": [
+    "monorepo",
+    "nextjs",
+    "nestjs",
+    "typescript",
+    "turborepo",
+    "docker",
+    "template",
+    "starter"
+  ],
+  "author": {
+    "name": "Saraan Asim",
+    "email": "saraanofficial@gmail.com",
+    "url": "https://saraanasim.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saraanasim/nexnest-monorepo-starter.git"
+  },
+  "template": {
+    "setupScript": "scripts/setup-template.sh",
+    "instructions": "TEMPLATE.md",
+    "replacements": {
+      "nexnest-monorepo-starter": "your-project-name",
+      "@saraanasim": "@your-org"
+    }
+  }
+}

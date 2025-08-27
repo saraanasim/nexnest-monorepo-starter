@@ -17,7 +17,7 @@ services:
     depends_on:
       - backend
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # Backend Development
   backend:
@@ -35,7 +35,7 @@ services:
     depends_on:
       - mongo
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # MongoDB for Development
   mongo:
@@ -45,9 +45,9 @@ services:
     volumes:
       - mongo_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=faith-online
+      - MONGO_INITDB_DATABASE=nexnest-monorepo-starter
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # Redis for Caching (Optional)
   redis:
@@ -57,12 +57,12 @@ services:
     volumes:
       - redis_data:/data
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
 volumes:
   mongo_data:
   redis_data:
 
 networks:
-  faith-online-network:
+  nexnest-monorepo-starter-network:
     driver: bridge

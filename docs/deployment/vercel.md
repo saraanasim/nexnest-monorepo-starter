@@ -1,6 +1,6 @@
 # Vercel Deployment Guide
 
-This guide covers deploying the Faith.Online frontend to Vercel.
+This guide covers deploying the NexNest Monorepo Starter frontend to Vercel.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Add the following environment variables in Vercel:
 ```bash
 # Required
 NEXT_PUBLIC_API_URL=https://your-backend-domain.com
-NEXT_PUBLIC_APP_NAME=Faith.Online
+NEXT_PUBLIC_APP_NAME=Your App Name
 
 # Optional
 NODE_ENV=production

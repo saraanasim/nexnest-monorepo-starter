@@ -1,8 +1,33 @@
 {
-  "name": "faith-online",
+  "name": "nexnest-monorepo-starter",
   "version": "1.0.0",
+  "description": "Production-ready monorepo template with Next.js frontend and NestJS backend",
   "private": true,
   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
+  "keywords": [
+    "monorepo",
+    "nextjs",
+    "nestjs",
+    "typescript",
+    "turborepo",
+    "docker",
+    "template",
+    "starter"
+  ],
+  "author": {
+    "name": "Saraan Asim",
+    "email": "saraanofficial@gmail.com",
+    "url": "https://saraanasim.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saraanasim/nexnest-monorepo-starter.git"
+  },
+  "homepage": "https://github.com/saraanasim/nexnest-monorepo-starter#readme",
+  "bugs": {
+    "url": "https://github.com/saraanasim/nexnest-monorepo-starter/issues"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -49,5 +74,9 @@
     "*.{json,md,yml,yaml}": [
       "prettier --write"
     ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   }
 }

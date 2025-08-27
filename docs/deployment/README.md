@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide covers various deployment options for the Faith.Online monorepo.
+This guide covers various deployment options for the NexNest Monorepo Starter.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ This guide covers various deployment options for the Faith.Online monorepo.
 
 ## Overview
 
-Faith.Online consists of:
+NexNest Monorepo Starter consists of:
 
 - **Frontend**: Next.js application
 - **Backend**: NestJS API
@@ -162,7 +162,7 @@ Faith.Online consists of:
 ```bash
 # Production
 NEXT_PUBLIC_API_URL=https://api.yourdomain.com
-NEXT_PUBLIC_APP_NAME=Faith.Online
+NEXT_PUBLIC_APP_NAME=Your App Name
 NODE_ENV=production
 ```
 

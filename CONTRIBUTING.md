@@ -1,16 +1,34 @@
-# Contributing to Faith.Online
+# Contributing to NexNest Monorepo Starter
 
-Thank you for your interest in contributing to Faith.Online! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to NexNest Monorepo Starter! This document provides guidelines and information for contributors.
 
 ## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [Development Workflow](#development-workflow)
-- [Code Standards](#code-standards)
-- [Testing](#testing)
-- [Pull Request Process](#pull-request-process)
-- [Commit Message Guidelines](#commit-message-guidelines)
+- [Contributing to NexNest Monorepo Starter](#contributing-to-nexnest-monorepo-starter)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Development Workflow](#development-workflow)
+    - [Branch Strategy](#branch-strategy)
+    - [Creating a Feature](#creating-a-feature)
+  - [Code Standards](#code-standards)
+    - [TypeScript](#typescript)
+    - [Code Style](#code-style)
+    - [File Organization](#file-organization)
+  - [Testing](#testing)
+    - [Running Tests](#running-tests)
+    - [Writing Tests](#writing-tests)
+  - [Pull Request Process](#pull-request-process)
+    - [Pull Request Template](#pull-request-template)
+  - [Commit Message Guidelines](#commit-message-guidelines)
+    - [Format](#format)
+    - [Types](#types)
+    - [Examples](#examples)
+    - [Rules](#rules)
+  - [Getting Help](#getting-help)
+  - [License](#license)
 
 ## Code of Conduct
 
@@ -30,8 +48,8 @@ This project and everyone participating in it is governed by our Code of Conduct
 2. **Clone your fork:**
 
    ```bash
-   git clone https://github.com/your-username/faith-online.git
-   cd faith-online
+   git clone https://github.com/your-username/nexnest-monorepo-starter.git
+   cd nexnest-monorepo-starter
    ```
 
 3. **Install dependencies:**

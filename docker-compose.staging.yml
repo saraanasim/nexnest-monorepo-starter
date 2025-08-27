@@ -13,7 +13,7 @@ services:
     depends_on:
       - backend
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # Backend Staging
   backend:
@@ -27,7 +27,7 @@ services:
     depends_on:
       - mongo
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # MongoDB Staging
   mongo:
@@ -35,9 +35,9 @@ services:
     volumes:
       - mongo_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=faith-online-staging
+      - MONGO_INITDB_DATABASE=nexnest-monorepo-starter-staging
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
   # Redis Staging
   redis:
@@ -45,12 +45,12 @@ services:
     volumes:
       - redis_data:/data
     networks:
-      - faith-online-network
+      - nexnest-monorepo-starter-network
 
 volumes:
   mongo_data:
   redis_data:
 
 networks:
-  faith-online-network:
+  nexnest-monorepo-starter-network:
     driver: bridge
