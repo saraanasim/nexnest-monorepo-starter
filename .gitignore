@@ -95,3 +95,11 @@ Thumbs.db
 
 # pnpm
 .pnpm-store/
+# Environment files in apps
+apps/*/.env
+apps/*/.env.local
+apps/*/.env.development.local
+apps/*/.env.test.local
+apps/*/.env.production.local
+apps/*/.env.staging
+apps/*/.env.production
