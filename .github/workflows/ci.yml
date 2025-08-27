@@ -54,11 +54,13 @@ jobs:
         run: pnpm build
 
       - name: Security audit
-        run: pnpm audit --audit-level moderate
-
-      - name: Check for vulnerabilities
-        if: failure()
         run: |
-          echo "❌ Security vulnerabilities found!"
-          echo "Please run 'pnpm audit' locally and fix any issues."
-          exit 1
+          echo "🔍 Running security audit..."
+          pnpm audit --audit-level moderate || {
+            echo "⚠️  Security vulnerabilities found!"
+            echo "Please run 'pnpm audit' locally and fix any issues."
+            echo "Vulnerability details:"
+            pnpm audit --audit-level moderate
+            exit 1
+          }
+        continue-on-error: false

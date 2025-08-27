@@ -1,0 +1,89 @@
+{
+  "recommendations": [
+    // Essential Extensions
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-json",
+    "yzhang.markdown-all-in-one",
+    "ms-vscode.vscode-yaml",
+    "ms-vscode.vscode-docker",
+    "ms-vscode.vscode-git-graph",
+    "eamodio.gitlens",
+
+    // React & Next.js
+    "ms-vscode.vscode-react-native",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-js-debug",
+
+    // NestJS & Backend
+    "ms-vscode.vscode-node-debug2",
+    "ms-vscode.vscode-js-debug-companion",
+
+    // Testing
+    "orta.vscode-jest",
+    "ms-vscode.test-adapter-converter",
+
+    // Productivity
+    "ms-vscode.vscode-todo-highlight",
+    "wayou.vscode-todo-highlight",
+    "gruntfuggly.todo-tree",
+    "streetsidesoftware.code-spell-checker",
+    "ms-vscode.vscode-edit-csv",
+    "ms-vscode.vscode-excel-viewer",
+
+    // Git & GitHub
+    "github.vscode-pull-request-github",
+    "github.copilot",
+    "github.copilot-chat",
+
+    // Themes & Icons
+    "pkief.material-icon-theme",
+    "zhuangtongfa.material-theme",
+    "dracula-theme.theme-dracula",
+
+    // Database
+    "cweijan.vscode-mysql-client2",
+    "ms-mssql.mssql",
+    "cweijan.vscode-postgresql-client2",
+
+    // API Development
+    "humao.rest-client",
+    "rangav.vscode-thunder-client",
+
+    // Performance
+    "ms-vscode.vscode-js-profile-flame",
+    "ms-vscode.vscode-js-profile-table",
+
+    // Accessibility
+    "deque-systems.vscode-axe-linter",
+
+    // Documentation
+    "ms-vscode.vscode-markdownlint",
+    "davidanson.vscode-markdownlint",
+
+    // Code Quality
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-yaml",
+    "redhat.vscode-xml",
+    "ms-vscode.vscode-css-peek",
+    "bradlc.vscode-tailwindcss",
+
+    // Terminal
+    "ms-vscode.vscode-js-debug",
+    "ms-vscode.vscode-js-debug-companion",
+
+    // Monorepo
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-yaml",
+    "ms-vscode.vscode-docker",
+    "ms-vscode.vscode-git-graph",
+    "eamodio.gitlens"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript",
+    "ms-vscode.vscode-javascript"
+  ]
+}
