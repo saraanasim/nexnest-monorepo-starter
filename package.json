@@ -12,7 +12,12 @@
     "start": "turbo run start",
     "start:prod": "turbo run start:prod",
     "type-check": "turbo run type-check",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    "docker:dev": "docker-compose up",
+    "docker:dev:build": "docker-compose up --build",
+    "docker:dev:down": "docker-compose down",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up --build",
+    "docker:prod:down": "docker-compose -f docker-compose.prod.yml down"
   },
   "devDependencies": {
     "turbo": "^2.5.6"

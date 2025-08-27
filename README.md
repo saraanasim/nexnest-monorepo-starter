@@ -79,3 +79,54 @@ To use the shared package in your apps, add it as a dependency:
 pnpm add @faith-online/shared --filter @faith-online/frontend
 pnpm add @faith-online/shared --filter @faith-online/backend
 ``` 
+## Docker Setup
+
+### Development Environment
+
+```bash
+# Start development environment
+pnpm docker:dev
+
+# Start with rebuild
+pnpm docker:dev:build
+
+# Stop development environment
+pnpm docker:dev:down
+```
+
+### Production Environment
+
+```bash
+# Build and start production
+pnpm docker:prod
+
+# Stop production environment
+pnpm docker:prod:down
+```
+
+### Manual Docker Commands
+
+```bash
+# Development
+docker-compose up
+docker-compose up --build
+docker-compose down
+
+# Production
+docker-compose -f docker-compose.prod.yml up --build
+docker-compose -f docker-compose.prod.yml down
+```
+
+### Services
+
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:3001
+- **MongoDB**: localhost:27017
+- **Redis**: localhost:6379
+
+### Environment Variables
+
+For production, set the following environment variables:
+- `DATABASE_URL`: MongoDB connection string
+- `JWT_SECRET`: JWT signing secret
+- `NODE_ENV`: production

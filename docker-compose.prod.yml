@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # Frontend Production
+  frontend:
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://backend:3001
+    depends_on:
+      - backend
+    networks:
+      - faith-online-network
+
+  # Backend Production
+  backend:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - mongo
+    networks:
+      - faith-online-network
+
+  # MongoDB Production
+  mongo:
+    image: mongo:7.0
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=faith-online
+    networks:
+      - faith-online-network
+
+  # Redis Production
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+    networks:
+      - faith-online-network
+
+volumes:
+  mongo_data:
+  redis_data:
+
+networks:
+  faith-online-network:
+    driver: bridge
