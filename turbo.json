@@ -20,6 +20,12 @@
     "clean": {
       "cache": false
     },
+    "type-check": {
+      "dependsOn": ["^build"]
+    },
+    "format": {
+      "cache": false
+    },
     "start": {
       "cache": false,
       "persistent": true,
