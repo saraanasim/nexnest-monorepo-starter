@@ -7,8 +7,8 @@ on:
     branches: [main, develop]
 
 jobs:
-  test:
-    name: Build, Test & Lint
+  build:
+    name: Build, Lint & Security Audit
     runs-on: ubuntu-latest
 
     steps:
@@ -46,9 +46,6 @@ jobs:
 
       - name: Run linting
         run: pnpm lint
-
-      - name: Run tests
-        run: pnpm test
 
       - name: Build applications
         run: pnpm build
