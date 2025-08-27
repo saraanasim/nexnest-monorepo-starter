@@ -15,6 +15,9 @@ RUN pnpm install --frozen-lockfile
 # Copy source code
 COPY . .
 
+# Copy environment files (will be overridden by docker-compose env_file)
+COPY .env* ./
+
 # Build the application
 RUN pnpm build
 

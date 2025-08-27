@@ -15,8 +15,8 @@ RUN pnpm install --frozen-lockfile
 # Copy source code
 COPY . .
 
-# Copy environment files (will be overridden by docker-compose env_file)
-COPY .env* ./
+# Copy staging environment file
+COPY .env.staging .env
 
 # Build the application
 RUN pnpm build
@@ -31,23 +31,23 @@ RUN npm install -g pnpm
 
 # Create non-root user
 RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN adduser --system --uid 1001 nestjs
 
 # Copy built application
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=builder /app/.env ./.env
 
 # Install only production dependencies
 RUN pnpm install --frozen-lockfile --prod
 
 # Change ownership
-RUN chown -R nextjs:nodejs /app
-USER nextjs
+RUN chown -R nestjs:nodejs /app
+USER nestjs
 
 # Expose port
-EXPOSE 3000
+EXPOSE 3001
 
-# Start production server
-CMD ["pnpm", "start"]
+# Start staging server
+CMD ["pnpm", "start:prod"] 

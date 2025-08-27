@@ -14,6 +14,9 @@ RUN pnpm install
 # Copy source code
 COPY . .
 
+# Copy environment files (will be overridden by docker-compose env_file)
+COPY .env* ./
+
 # Expose port
 EXPOSE 3000
 

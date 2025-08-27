@@ -1,45 +1,45 @@
 version: '3.8'
 
 services:
-  # Frontend Production
+  # Frontend Staging
   frontend:
     build:
       context: ./apps/frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.staging
     ports:
       - '3000:3000'
     env_file:
-      - ./apps/frontend/.env.production
+      - ./apps/frontend/.env.staging
     depends_on:
       - backend
     networks:
       - faith-online-network
 
-  # Backend Production
+  # Backend Staging
   backend:
     build:
       context: ./apps/backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.staging
     ports:
       - '3001:3001'
     env_file:
-      - ./apps/backend/.env.production
+      - ./apps/backend/.env.staging
     depends_on:
       - mongo
     networks:
       - faith-online-network
 
-  # MongoDB Production
+  # MongoDB Staging
   mongo:
     image: mongo:7.0
     volumes:
       - mongo_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=faith-online
+      - MONGO_INITDB_DATABASE=faith-online-staging
     networks:
       - faith-online-network
 
-  # Redis Production
+  # Redis Staging
   redis:
     image: redis:7-alpine
     volumes:

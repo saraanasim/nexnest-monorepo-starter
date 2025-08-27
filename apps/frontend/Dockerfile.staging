@@ -15,8 +15,8 @@ RUN pnpm install --frozen-lockfile
 # Copy source code
 COPY . .
 
-# Copy environment files (will be overridden by docker-compose env_file)
-COPY .env* ./
+# Copy staging environment file
+COPY .env.staging .env
 
 # Build the application
 RUN pnpm build
@@ -38,6 +38,7 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=builder /app/.env ./.env
 
 # Install only production dependencies
 RUN pnpm install --frozen-lockfile --prod
@@ -49,5 +50,5 @@ USER nextjs
 # Expose port
 EXPOSE 3000
 
-# Start production server
-CMD ["pnpm", "start"]
+# Start staging server
+CMD ["pnpm", "start"] 

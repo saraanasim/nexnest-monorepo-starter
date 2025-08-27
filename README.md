@@ -75,10 +75,12 @@ The `packages/shared` directory is ready for future shared code:
 - **config/**: Shared configuration objects
 
 To use the shared package in your apps, add it as a dependency:
+
 ```bash
 pnpm add @faith-online/shared --filter @faith-online/frontend
 pnpm add @faith-online/shared --filter @faith-online/backend
-``` 
+```
+
 ## Docker Setup
 
 ### Development Environment
@@ -92,6 +94,22 @@ pnpm docker:dev:build
 
 # Stop development environment
 pnpm docker:dev:down
+
+# Build development images
+pnpm docker:build:dev
+```
+
+### Staging Environment
+
+```bash
+# Start staging environment
+pnpm docker:staging
+
+# Stop staging environment
+pnpm docker:staging:down
+
+# Build staging images
+pnpm docker:build:staging
 ```
 
 ### Production Environment
@@ -102,6 +120,16 @@ pnpm docker:prod
 
 # Stop production environment
 pnpm docker:prod:down
+
+# Build production images
+pnpm docker:build:prod
+```
+
+### Build All Environments
+
+```bash
+# Build all Docker images
+pnpm docker:build:all
 ```
 
 ### Manual Docker Commands
@@ -111,6 +139,10 @@ pnpm docker:prod:down
 docker-compose up
 docker-compose up --build
 docker-compose down
+
+# Staging
+docker-compose -f docker-compose.staging.yml up --build
+docker-compose -f docker-compose.staging.yml down
 
 # Production
 docker-compose -f docker-compose.prod.yml up --build
@@ -127,6 +159,7 @@ docker-compose -f docker-compose.prod.yml down
 ### Environment Variables
 
 For production, set the following environment variables:
+
 - `DATABASE_URL`: MongoDB connection string
 - `JWT_SECRET`: JWT signing secret
 - `NODE_ENV`: production
