@@ -1,0 +1,94 @@
+Faith.online Product Requirements Document (PRD) Draft
+Tagline: Faithfully united. Digitally connected.
+1. Executive Summary
+Faith.online is a social media platform purpose-built for evangelical Christians, offering a trusted
+platform, and theologically aligned space for discipleship, community, and mission. Unlike
+secular apps and fragmented church tools, Faith.online brings together believers, churches,
+ministries, businesses, and creators in a single, curated digital home grounded in
+Gospel-centered values and modern UX.
+2. Product Goals
+●​ Unite the evangelical digital community under one moderated, Christ-centered platform​
+●​ Eliminate distractions like profanity, nudity, political content, and ad clutter​
+●​ Enable safe, purposeful social interaction rooted in clear evangelical doctrine​
+●​ Provide essential tools for rhythms of faith, discipleship, and outreach​
+3. Core User Segments
+User Type
+Description
+Individual BelieversEveryday users engaging with faith-based content, prayer, and
+fellowship
+Church Leaders /
+MinistriesHost Faith Pages, events, and communication with congregations
+Christian BusinessesList services/products in the Faith Directory and marketplace
+Faith-Based CreatorsShare Gospel-aligned content and grow a like-minded following
+Families & Small GroupsUse shared tools for spiritual disciplines and planning
+New Converts & SeekersFind encouragement, sound teaching, and community support4. MVP Feature Set
+Must Have
+●​ Faith Directory – Claimable public Faith Pages for churches, ministries, creators, and
+businesses​
+●​ Rhythm Keeper (Basic) – Shared calendar, habit tracker, and daily rhythm tools​
+●​ Gospel-Driven Moderation System – Content and user behavior moderated against
+evangelical guidelines​
+●​ User Posts – Text, images, prayer needs, testimonies (social layer)​
+●​ Connect / Followers – Build networks across believers, churches, and creators​
+●​ Amen / Bless / Uplift Reactions – Purposeful engagement tools with limited emotional
+range​
+●​ Comments / Replies – Controlled conversations within posts and threads​
+●​ Community Stream – Feed of posts, prayer needs, and testimonies from one’s network​
+●​ Christian News Feed – Curated evangelical news and thought leadership​
+●​ Daily Bible Verse – Shareable scripture snippets on the home dashboard​
+Nice to Have
+●​ Messaging – Private DMs with biblical boundaries and safety filters​
+●​ Creator Tools – Monetization features (post-MVP)​
+●​ Faith Market – Curated e-commerce space for Christian goods (post-MVP)​
+Future (Post-MVP)
+●​ Rhythm Keeper Pro – Premium analytics, team dashboards, and task tools​
+●​ Faith Market (Expanded)​●​ Creator Monetization Tools – Tipping, merch, ad-sharing​
+●​ Biblical Dating – Accountable, Scripture-rooted relationships​
+●​ AI / AR/VR Modules – Immersive events, smart discovery, automated moderation​
+5. Platform Scope
+●​ Platform: Web-based (responsive design for desktop and mobile browsers)​
+●​ Architecture: Modular backend for scalability and future feature integration​
+●​ Security: Role-based access, secure messaging, content pre-screening​
+●​ Compliance: GDPR-compliant, privacy-focused, data secure​
+●​ Design: Modern, minimalist, iOS-style layout with intentional UI and UX​
+6. UX & Branding Guidelines
+●​ Style: Clean, minimal, distraction-free — inspired by Apple’s design philosophy​
+●​ Tone: Calm, reverent, and user-focused​
+●​ Visuals: White space, elegant typography, soft iconography​
+●​ Content: Gospel-centered, no ads, profanity, nudity, or political content​
+Faith.online Terminology
+Generic Term
+Faith.online Term
+FollowConnect
+LikeAmen / Bless / Uplift
+StoryTestimonyFeedCommunity Stream / Prayer Wall
+ProfileFaith Page
+View CountWitnesses
+7. Monetization Strategy (Preview)
+●​ Rhythm Keeper Pro – Subscription ($4.99 personal / $19.99 team)​
+●​ Paid Directory Upgrades – Featured placements, SEO boosts, verified badges​
+●​ Faith-Aligned Ads – Only from vetted Christian brands/events​
+●​ Creator Tools – Tipping, subscriptions, ad-sharing for approved content​
+●​ Church/Org Licenses – White-labeled tools and analytics dashboards​
+●​ Faith Market – Commission-based eCommerce marketplace​
+8. Timeline & Milestones
+Month
+Milestone
+Aug 2025Finalize specs, branding, and development
+plan
+Sep 2025Begin development (MVP Core)
+Oct 2025Internal Alpha testing
+Nov 2025Beta pilot with select churches & creators
+Dec 2025Iteration & final QA
+Jan 2026
+🎉 Public MVP Launch
+9. Success Metrics (MVP)●​ 100+ churches/creators onboarded within 60 days​
+●​ 1,000+ daily active users (DAU) in first 90 days​
+●​ 90%+ moderation success rate (flagged vs resolved content)​
+●​ <10% churn rate during beta phase​
+●​ Launch feature set with <5 major bugs post-deployment​
+10. The Why
+“...so that in all things God may be praised through Jesus Christ.” — 1 Peter 4:11
+Faith.online isn’t just another app — it's a digital sanctuary. With Gospel-driven innovation and
+modern design excellence, we are building something eternally meaningful for believers
+everywhere.

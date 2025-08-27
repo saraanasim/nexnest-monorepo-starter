@@ -1,0 +1,95 @@
+Faith.online Technical Requirements Document (TRD)
+Version: v1.0​
+Date: August 7, 2025​
+Prepared by: Mike Turner, Fractional CTO
+1. Project Overview
+Faith.online is a moderated, Christ-centered digital platform designed for believers, churches,
+ministries, Christian businesses, and creators. It provides an ad-free, distraction-free, and
+Gospel-aligned alternative to secular social media platforms, supporting prayer, testimony,
+connection, events, and discipleship through modern UX.
+2. Technology Stack Overview
+Frontend:
+●​ Framework: Next.js (TypeScript)​
+●​ UI: Responsive, mobile-first​
+●​ SSR/SSG: Supported via AWS Amplify or CloudFront​
+●​ PWA: Installable with offline support (Service Worker)​
+Backend:
+●​ Framework: NestJS (Node.js, TypeScript)​
+●​ API Type: RESTful (extendable to GraphQL)​
+●​ Realtime Messaging: WebSockets (via AWS ALB + ECS or API Gateway + Lambda)​
+Database:
+●​ MongoDB Atlas (deployed in AWS region)​●​ Schema includes: Users, FaithPages, Posts, Comments, Reactions, Moderation, Events,
+Settings​
+Authentication & Authorization:
+●​ JWT-based auth with refresh tokens​
+●​ Roles: Believer, Creator, Admin, Superadmin​
+●​ RBAC enforced through NestJS guards and route middleware​
+Cloud Platform: Amazon Web Services (AWS)
+●​ Justification: Best fit for Ikonic stack, scalability, moderation tooling, SSR support, and
+MongoDB hosting​
+3. Infrastructure & DevOps
+●​ Hosting Services:​
+○​ Frontend: AWS Amplify or S3 + CloudFront​
+○​ Backend: AWS ECS (Fargate) or Lambda (via SST)​
+○​ Database: MongoDB Atlas (multi-AZ deployment)​
+●​ Security:​
+○​ AWS Secrets Manager for credentials​
+○​ Role-based access via IAM and API-level restrictions​
+●​ Environments:​
+○​ dev, staging, production​
+●​ CI/CD:​
+○​ GitHub Actions + AWS CodeDeploy or CodePipeline​●​ Monitoring & Logging:​
+○​ AWS CloudWatch​
+○​ Application-level logs retained for moderation audits​
+4. Core MVP Modules
+Module
+Description
+Faith DirectoryCRUD for FaithPages, claim/verify flow, search + filter
+Rhythm Keeper (Basic)Habit tracker, calendar, shared planning tools
+MessagingDirect messages with safety filters, real-time via
+WebSockets
+User PostsText/image posts, testimonies, prayer requests
+ReactionsPositive-only (Amen, Bless)
+CommentsThreaded replies with moderation queue
+Connections SystemConnect/unconnect, "My Network" view
+Community StreamAlgorithmic or chronological post feed
+ModerationManual flagging, AI word filter, admin dashboard
+Daily Bible VerseRotating scripture feed from in-app DB or API
+Christian News FeedCurated RSS imports displayed on dashboard
+White-label BrandingTheme color/font/logo customization per FaithPage
+5. Moderation & Safety
+●​ Filters:​
+○​ AI word filter for profanity, politics, harmful content​
+○​ Manual flagging by users​●​ Admin Tools:​
+○​ Moderation queue, approve/reject, ban/suspend users​
+○​ Role management and analytics dashboard​
+●​ Content Types Filtered:​
+○​ Posts, Comments, Messages​
+●​ Youth Privacy:​
+○​ No public profiles under 13, COPPA-inspired limitations​
+○​ All data stored in compliance with GDPR and privacy best practices​
+●​ Escalation:​
+○​ Theological disputes escalated to admin team for manual resolution​
+6. Theming & Customization
+●​ Each FaithPage can customize its theme​
+●​ Custom elements: logo, colors, fonts​
+●​ Stored in MongoDB and dynamically applied at render​
+7. Testing & QA
+●​ Unit tests for UI components and API logic​
+●​ Integration tests for auth flows, moderation, messaging​
+●​ Manual QA during alpha, beta, pre-launch​
+●​ Performance testing using Lighthouse​●​ PWA installable compliance check​
+8. Deployment Milestones
+Phase
+Target Date
+Deliverables
+Infrastructure Setup Aug 2025Auth, DB schema, CI/CD, component library
+MVP Core DevSep–Nov 2025Directory, Messaging, Feed, Rhythm Keeper
+QA & Beta RolloutNov–Dec 2025Internal QA, pilot testing, bug fixes
+Final PolishDec 2025Mobile optimization, performance tuning
+Public LaunchJan 2026Live deployment of Faith.online MVP
+9. Open Questions & Assumptions
+●​ Stripe integration is Phase 2 (not included in MVP)​
+●​ No headless CMS is planned; Bible/news content will be in-app or RSS​
+●​ AWS will host all production infrastructure​
+●​ Project cost management will follow weekly milestone billing​
