@@ -68,7 +68,7 @@
       "prettier --write --config apps/backend/.prettierrc"
     ],
     "packages/shared/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --config packages/shared/.eslintrc.js",
+      "eslint --fix --config packages/shared/eslint.config.mjs",
       "prettier --write --config packages/shared/.prettierrc"
     ],
     "*.{json,md,yml,yaml}": [
